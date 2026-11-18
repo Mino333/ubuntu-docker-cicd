@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build-and-deploy:
-    runs-on: [self-hosted,mint-laptop]
+    runs-on: self-hosted
 
     steps:
       - name: Checkout source code
