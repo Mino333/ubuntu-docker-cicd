@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY:latest
+    container_name: cicd-demo
+    ports:
+      - "8080:5000"
+    restart: unless-stopped
