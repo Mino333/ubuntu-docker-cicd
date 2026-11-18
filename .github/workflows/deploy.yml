@@ -27,17 +27,17 @@ jobs:
         run: |
           docker compose up -d --build
 
-    - name: Verify deployment
-  run: |
-    for i in {1..10}; do
-      if curl --fail http://127.0.0.1:8080; then
-        echo "Deployment successful"
-        exit 0
-      fi
-      echo "Waiting for application..."
-      sleep 3
-    done
+      - name: Verify deployment
+        run: |
+          for i in {1..10}; do
+          if curl --fail http://127.0.0.1:8080; then
+          echo "Deployment successful"
+          exit 0
+          fi
+          echo "Waiting for application..."
+          sleep 3
+          done
 
-    echo "Deployment failed"
-    docker logs cicd-demo
-    exit 1
+          echo "Deployment failed"
+          docker logs cicd-demo
+          exit 1
