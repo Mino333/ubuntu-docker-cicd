@@ -4,5 +4,5 @@ services:
     image: cicd-demo:latest
     container_name: cicd-demo
     ports:
-      - "8080:5000"
+      - "8080:80"
     restart: unless-stopped
